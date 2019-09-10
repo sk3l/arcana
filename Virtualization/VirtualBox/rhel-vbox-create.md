@@ -30,6 +30,8 @@
   * select "Live CD/USB" option
   * in "Optical Drive" entry, select desired .iso image from host system file pathe
 
+## RHEL Installation
+
 * commence VM installation (example is Red Hat Enterprise Linux 7)
  * click 'Start' from top level menu
  * click 'Install Red Hat Enterprise Linux 7'
@@ -58,7 +60,7 @@
 
 * for remote SSH access, create a network port forward to the VM via VirtualBox "NAT" network interface
 
-## RHEL Setup
+## RHEL Post-install Setup
 
 * create a `$HOME/.local` directory for local dev stuff
 
