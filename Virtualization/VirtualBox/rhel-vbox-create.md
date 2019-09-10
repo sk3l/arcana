@@ -101,15 +101,26 @@ chmod 600 ~/.ssh/authorized_keys
 ```
 
 * install useful developer tools
+
   [ ] newer Git (2.x+) - SCL?
+  
   [ ] newer ViM (8.x+) - compile from source?
+  
   [ ] ViM Vundle, plugins
-  [ ] newer tmux       - compile from source? 
+  
+  [ ] newer tmux       - compile from source?
+  
   [ ] Clang/LLVM (for ViM syntastic)
+  
   [ ] CMake3
+  
   [ ] devtoolset-7 g++, gdb - SCL
+  
   [ ] python36, python36-pip, python36-setuptools
+  
   [ ] python -> pylint, jedi-vim, virtualenvwrapper
+  
   [ ] tree
+  
   [ ] tidy
 
