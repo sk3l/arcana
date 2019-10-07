@@ -10,7 +10,7 @@ Follow the steps below to set up your own copy of ViM, with source version and o
 
 2. Use the host package manager to install any compile/run time dependencies you wish add to your ViM build. For example, using Red Hat YUM, you can pull in packages required for ViM Lua and Python features like thus:
 
-   sudo yum install -y lua lua-devel luajit luajit-devel python36 python36-devel
+   sudo yum install -y lua lua-devel luajit luajit-devel python python-devel python36 python36-devel
 
 3. Change directory into `vim/src` folder; run `./configure` script with features you wish to turn on, for example:
 
@@ -21,8 +21,11 @@ Follow the steps below to set up your own copy of ViM, with source version and o
      --enable-multibyte  \
      --enable-luainterp \
      --with-luajit \
-     --enable-pythoninterp \
-     --prefix=/home/mskelton8/.local/vim \
+     --enable-pythoninterp=yes \
+     --with-python-config-dir=/lib64/python2.7/config \
+     --enable-python3interp=yes \
+     --with-python3-config-dir=/lib64/python3.6/config-3.6m-x86_64-linux-gnu \
+     --prefix=$HOME/.local/vim \
      --with-features=huge  \
      --with-tlib=ncurses \
      --without-x \
