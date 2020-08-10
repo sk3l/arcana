@@ -1,3 +1,4 @@
+```bash
 # see here for description/context of LUKS/LVM commands
 # https://askubuntu.com/a/918030
 
@@ -161,5 +162,4 @@ okular
 Filezilla
 plasma-nm
 
-
-
+```
