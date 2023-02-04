@@ -33,7 +33,36 @@ Note that this guide is a algamation of several separate documents on the subjec
 
 5. Click 'Create' button
 
-### Install Crostini repositories
+### Enter New Container
+
+Start by entering the Chrome shell (crosh) by pressing CTRL+ALT+T, then enter the default termina VM:
+
+```
+vmc start termina
+```
+
+Enter the newly created container (as root) via a Bash session 
+
+```
+lxc exec {container_name} -- bash
+```
+
+### User Group Transfer
+
+Capture group membership for default ubuntu user, then delete user
+
+Create a little script which we will use later to add your username to all the default Ubuntu groups, then delete the default ubuntu user:
+```
+groups ubuntu >update-groups
+sed -i 'y/ /,/; s/ubuntu,:,ubuntu,/sudo usermod -aG /; s/$/ \$USER/' update-groups
+killall -u ubuntu
+userdel -r ubuntu
+sed -i '/^ubuntu/d' /etc/sudoers.d/90-cloud-init-users
+```
+
+### Install Crostini Repositories
+
+Now we must install the necessary Google cros support packages in our container.
 
 Prepare for installing Google's Crostini specific packages. First bring Ubuntu up to date:
 ```
