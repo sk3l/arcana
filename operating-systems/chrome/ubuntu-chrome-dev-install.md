@@ -100,14 +100,17 @@ vi ./tmp/DEBIAN/conffiles # rm the /etc/gtk-3.0/settings.ini line then save and 
 dpkg-deb -b tmp cros-ui-config-fixed.deb
 ````
 
-### Install Crostini packages
+### Install Crostini Packages and Finishing Up
 
+```
 apt install ./cros-ui-config-fixed.deb cros-guest-tools
-Finishing up
+```
 
 Now, shut down the container:
 
+```
 shutdown -h now
+```
 
 Reboot Chrome OS and start the Terminal application from the launcher. If it fails to start the first time, try again and it should work.
 
