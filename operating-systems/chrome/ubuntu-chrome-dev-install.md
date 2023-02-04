@@ -70,6 +70,14 @@ apt update
 apt upgrade
 ```
 
+We must not install the GNU Privacy Gaurd tool (GPG) to permit processing key signatures from Google's cros repo.
+
+**NOTE THAT IF YOU OMIT THIS STEP, THE NEXT STEP (init Crositini package repo) WILL FAIL!**
+
+```
+apt install -y gpg
+```
+
 Now add the Crostini package repository to apt. This repository provides the Linux integration with Chrome OS:
 ```
 echo "deb https://storage.googleapis.com/cros-packages bullseye main" > /etc/apt/sources.list.d/cros.list
